@@ -2,7 +2,7 @@ import app from 'firebase/app';
 import 'firebase/auth';
 import 'firebase/database';
 
-const firebaseConfig = {
+const config = {
     apiKey: "AIzaSyAB7z9n9R9RoECPr9EW39hytP2pkAnWqCI",
     authDomain: "workout-tracker-801dc.firebaseapp.com",
     projectId: "workout-tracker-801dc",
@@ -14,7 +14,7 @@ const firebaseConfig = {
 
 class Firebase {
     constructor() {
-        app.initializeApp(firebaseConfig);
+        app.initializeApp(config);
         this.auth = app.auth();
         this.db = app.database();
     }

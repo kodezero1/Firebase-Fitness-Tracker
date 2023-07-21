@@ -2,19 +2,19 @@ import app from 'firebase/app';
 import 'firebase/auth';
 import 'firebase/database';
 
-const config = {
-    apiKey: "AIzaSyCfsvXKJguArR_axE1-806BgdPhfyW1c90",
-    authDomain: "workout-tracker-a7ac5.firebaseapp.com",
-    databaseURL: "https://workout-tracker-a7ac5.firebaseio.com",
-    projectId: "workout-tracker-a7ac5",
-    storageBucket: "workout-tracker-a7ac5.appspot.com",
-    messagingSenderId: "32174510048",
-    appId: "1:32174510048:web:a1305976bd438222402585"
-};
+const firebaseConfig = {
+    apiKey: "AIzaSyAB7z9n9R9RoECPr9EW39hytP2pkAnWqCI",
+    authDomain: "workout-tracker-801dc.firebaseapp.com",
+    projectId: "workout-tracker-801dc",
+    storageBucket: "workout-tracker-801dc.appspot.com",
+    messagingSenderId: "358962789249",
+    appId: "1:358962789249:web:819e0ed3801c729c008680",
+    measurementId: "G-FK2ECTEMXW"
+  };
 
 class Firebase {
     constructor() {
-        app.initializeApp(config);
+        app.initializeApp(firebaseConfig);
         this.auth = app.auth();
         this.db = app.database();
     }

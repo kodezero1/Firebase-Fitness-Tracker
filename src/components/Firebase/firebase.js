@@ -3,14 +3,15 @@ import 'firebase/auth';
 import 'firebase/database';
 
 const config = {
-    apiKey: "AIzaSyAB7z9n9R9RoECPr9EW39hytP2pkAnWqCI",
-    authDomain: "workout-tracker-801dc.firebaseapp.com",
-    projectId: "workout-tracker-801dc",
-    storageBucket: "workout-tracker-801dc.appspot.com",
-    messagingSenderId: "358962789249",
-    appId: "1:358962789249:web:819e0ed3801c729c008680",
-    measurementId: "G-FK2ECTEMXW"
-  };
+  apiKey: "AIzaSyAB7z9n9R9RoECPr9EW39hytP2pkAnWqCI",
+  authDomain: "workout-tracker-801dc.firebaseapp.com",
+  databaseURL: "https://workout-tracker-801dc-default-rtdb.firebaseio.com",
+  projectId: "workout-tracker-801dc",
+  storageBucket: "workout-tracker-801dc.appspot.com",
+  messagingSenderId: "358962789249",
+  appId: "1:358962789249:web:819e0ed3801c729c008680",
+  measurementId: "G-FK2ECTEMXW"
+};
 
 class Firebase {
     constructor() {

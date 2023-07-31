@@ -25,6 +25,7 @@ import useStyles from '../config/theme.dashboard';
 
 import Calendar from '../components/Calendar';
 import Sidebar from '../components/Sidebar';
+import Firebase from '../components/Firebase';
 // import Copyright from '../components/Copyright';
 
 function Dashboard(props) {
@@ -41,6 +42,7 @@ function Dashboard(props) {
     props.firebase.auth.signOut()
     props.history.push("/");
   }
+  console.log(Firebase)
 
   return (
         <AuthUserContext.Consumer>

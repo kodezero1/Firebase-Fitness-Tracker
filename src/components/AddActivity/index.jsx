@@ -20,7 +20,14 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
+const strike = {
+    .strikethrough {
+        textDecoration: lineThrough;
+      }
+}
 function AddActivity(props) {
+    const [isChecked, setIsChecked] = useState(false);
+
     const classes = useStyles();
 
     const {authUser, firebase, selectedDay, setOpenSnackbar, setSnackbarMsg} = props;
@@ -46,6 +53,11 @@ function AddActivity(props) {
             ...activity, 
             date: queryDate,
             [name]: value});
+
+        const handleCheckboxChange = (event) => {
+              setIsChecked(event.target.checked);
+              };
+            
     }
 
     const handleSlider = e => {
@@ -116,6 +128,13 @@ function AddActivity(props) {
                     style={{marginBottom: '20px'}}
                 />
             </FormControl>
+            <FormControl>
+        <input
+          type="checkbox"
+          checked={isChecked}
+          onChange={handleCheckboxChange}
+        />
+      </FormControl>
             <Button
                 type="submit"
                 fullWidth
